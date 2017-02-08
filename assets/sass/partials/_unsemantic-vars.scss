@@ -269,12 +269,12 @@ $lang-reverse: right !default;
     @if $unsemantic-prefix-suffix-support {
       // Prefix, to add extra columns before.
       %#{$scope}prefix-#{$num} {
-        margin-#{$lang-forward}: $percent;
+        margin-#{$lang-forward}: $percent !important;
       }
 
       // Suffix, to add extra columns after.
       %#{$scope}suffix-#{$num} {
-        margin-#{$lang-reverse}: $percent;
+        margin-#{$lang-reverse}: $percent !important;
       }
     }
 
