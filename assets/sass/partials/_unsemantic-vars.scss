@@ -253,9 +253,9 @@ $lang-reverse: right !default;
   // `Grid columns.
   // ==============
 
-  // For 5 through 95 percent.
-  @for $i from 1 through 19 {
-    $num: $i * 5;
+  // For 1 through 100 percent.
+  @for $i from 1 through 100 {
+    $num: $i;
     $decimal: $num / 100;
     $percent: $num * 1%;
 
@@ -295,7 +295,7 @@ $lang-reverse: right !default;
   }
 
   // For one-third and two-thirds.
-  @for $i from 1 through 2 {
+  // @for $i from 1 through 2 {
     $num: $i * 33;
     $one-third: 1 / 3;
     $decimal: $i * $one-third;
