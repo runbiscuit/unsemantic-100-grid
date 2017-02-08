@@ -355,17 +355,8 @@ $lang-reverse: right !default;
       }
 
       // For 5 through 100 percent.
-      @for $i from 1 through 20 {
-        $num: $i * 5;
-
-        .#{$class}grid-#{$num} {
-          @extend %grid-columns-all;
-        }
-      }
-
-      // For one-third and two-thirds.
-      @for $i from 1 through 2 {
-        $num: $i * 33;
+      @for $i from 1 through 100 {
+        $num: $i;
 
         .#{$class}grid-#{$num} {
           @extend %grid-columns-all;
@@ -409,32 +400,9 @@ $lang-reverse: right !default;
     @extend %#{$scope}grid-100;
   }
 
-  // For 5 through 95 percent.
-  @for $i from 1 through 19 {
-    $num: $i * 5;
-
-    // Percentage based widths.
-    .#{$class}grid-#{$num} {
-      @extend %#{$scope}grid-#{$num};
-    }
-
-    // Allow empty columns?
-    @if $unsemantic-prefix-suffix-support {
-      // Prefix, to add extra columns before.
-      .#{$class}prefix-#{$num} {
-        @extend %#{$scope}prefix-#{$num};
-      }
-
-      // Suffix, to add extra columns after.
-      .#{$class}suffix-#{$num} {
-        @extend %#{$scope}suffix-#{$num};
-      }
-    }
-  }
-
-  // For one-third and two-thirds.
-  @for $i from 1 through 2 {
-    $num: $i * 33;
+  // For 1 through 100 percent
+  @for $i from 1 through 100 {
+    $num: $i;
 
     // Percentage based widths.
     .#{$class}grid-#{$num} {
