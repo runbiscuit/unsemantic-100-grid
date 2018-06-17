@@ -1,13 +1,28 @@
 {
   "name": "unsemantic",
-  "version": "1.1.3",
+  "main": "assets/react/dist/index.js",
+  "version": "1.2.3",
   "description": "Fluid grid for mobile, tablet, and desktop.",
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.5.10"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "rimraf": "^2.6.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf assets/react/dist",
+    "compile": "npm run clean && babel assets/react/source -d assets/react/dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nathansmith/unsemantic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nathansmith/unsemantic/issues"
   },
   "keywords": [
     "css",
@@ -20,8 +35,5 @@
   ],
   "author": "Nathan Smith",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nathansmith/unsemantic/issues"
-  },
   "homepage": "https://github.com/nathansmith/unsemantic#readme"
 }
