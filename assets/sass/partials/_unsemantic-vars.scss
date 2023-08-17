@@ -256,8 +256,8 @@ $lang-reverse: right !default;
   // For 1 through 100 percent.
   @for $i from 1 through 100 {
     $num: $i;
-    $decimal: $num / 100;
-    $percent: $num * 1%;
+    $decimal: calc($num / 100);
+    $percent: calc($num * 1%);
 
     %#{$scope}grid-#{$num} {
       float: $lang-forward;
